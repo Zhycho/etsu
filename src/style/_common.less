@@ -671,3 +671,121 @@
         }
     }
 }
+
+// 404
+
+.page-404 {
+    margin: 160px auto 80px;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        margin: 80px auto 40px;
+    }
+
+    @media (max-width: 480px) {
+        margin: 0 auto 40px;
+    }
+}
+
+.page-404__404 {
+    display: block;
+    font-size: 8.3125rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+
+    @media (max-width: 576px) {
+        font-size: 5rem;
+    }
+}
+
+.page-404__headline {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 44px;
+
+    @media (max-width: 576px) {
+        margin-bottom: 24px;
+    }
+}
+
+.page-404__search {
+    display: flex;
+    margin: 0 auto 28px;
+    max-width: 400px;
+    position: relative;
+
+    input[type="search"] {
+        border: 1px solid #707070;
+        border-right: none;
+        height: 40px;
+        padding: 8px 12px 8px 36px;
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        height: 40px;
+        min-width: 150px;
+        padding: 0;
+        width: 150px;
+    }
+
+    svg {
+        left: 12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media (max-width: 480px) {
+        input[type="submit"] {
+            min-width: 110px;
+            width: 110px;
+        }
+    }
+}
+
+.page-404__link {
+    color: @green;
+    font-size: 0.875rem;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.page-404__smile {
+    align-items: center;
+    background: @green;
+    border-radius: 50%;
+    color: #FFF;
+    display: flex;
+    font-size: 4.5rem;
+    height: 165px;
+    justify-content: center;
+    padding: 0 12px 12px 0;
+    position: absolute;
+    right: 0;
+    top: -120px;
+    width: 165px;
+
+    &::after {
+        background: @green;
+        bottom: 0;
+        clip-path: polygon(33% 1%, 100% 0, 100% 51%, 0% 100%);
+        content: "";
+        display: block;
+        height: 40px;
+        left: 0;
+        position: absolute;
+        width: 40px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+

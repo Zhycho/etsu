@@ -1,0 +1,26 @@
+include ./mixins/icons/icons.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container
+                .page-404
+                    span.page-404__404 404
+                    span.page-404__headline Страница не найдена. Попробуйте найти то что искали!
+                    form(action="").page-404__search
+                        input(type="search", name="")
+                        input(type="submit", value="Искать").btn
+                        +icon-search
+                    a(href="").page-404__link На главную
+                    span.page-404__smile :(
+
+
+            include ./templates/feedback-form/feedback-form.pug
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug
