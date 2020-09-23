@@ -31,6 +31,30 @@ $(document).ready(function() {
     });
 
 
+    // Даты
+    moment.locale('ru');
+
+    let elementsForTime = document.querySelectorAll('.js--time')
+    
+    for (let el of elementsForTime) {
+        let date = el.innerHTML
+        el.innerHTML = moment(date).calendar();
+    }
+
+    // Картинки в контенте
+    $('.typical-content img').each(function () {
+        let img = $(this);
+        img.removeAttr("width");
+        img.removeAttr("height");
+        let alt = img.attr('alt');
+        let title = img.attr('title');
+        
+        img.wrap('<div class="typical-img__wrapper">');
+        let wrap = img.parent();
+        wrap.append('<span class="typical-img__title">'+alt+'</span>');
+        wrap.append("<span class='typical-img__alt'>"+title+"</span>");
+    });
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [

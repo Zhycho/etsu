@@ -62,18 +62,15 @@ html(lang="ru")
                         +file
                         +share-line
                     div
-                        .last-news
-                            span.last-news__headline Последние новости
-                            ul.last-news__list
+                        nav.article-aside-nav
+                            span.article-aside-nav__headline Разделы
+                            ul
                                 li
-                                    time(datetime="2020-07-13 12:30").js--time 2020-09-13 12:30
-                                    a(href="") 4-я автомобильная колонна МЧС России доставила гуманитарный груз жителям Донецкой и Луганской областей.
+                                    a(href="").active Новости пермского края
                                 li
-                                    time(datetime="2020-07-13 12:30").js--time 2020-09-13 12:30
-                                    a(href="") 4-я автомобильная колонна МЧС России доставила гуманитарный груз жителям Донецкой и Луганской областей.
+                                    a(href="") Официальная информация
                                 li
-                                    time(datetime="2020-07-13 12:30").js--time 2020-09-13 12:30
-                                    a(href="") 4-я автомобильная колонна МЧС России доставила гуманитарный груз жителям Донецкой и Луганской областей.
+                                    a(href="") Новости ГКУ ПК «УЦУ»
             include ./templates/feedback-form/feedback-form.pug
             include ./templates/mobile-menu/mobile-menu.pug
         footer
