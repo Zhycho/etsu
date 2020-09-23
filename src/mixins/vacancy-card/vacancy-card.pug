@@ -1,0 +1,17 @@
+mixin vacancy-card(title="Вакансия")
+    li.vacancy-card
+        div
+            span.vacancy-card__headline= title
+        div
+            ul.vacancy-card__list
+                li
+                    span График:
+                    span Полный рабочий день
+                li
+                    span Опыт работы:
+                    span От 1 года
+                li
+                    span Образование:
+                    span Высшее
+            span.vacancy-card__price 25 000 &#8381;
+            a(href="").vacancy-card__link Подробнее о вакансии

@@ -1,0 +1,11 @@
+include ../time-info/time-info.pug
+
+mixin article-card(srcOfImage="")
+    li.article-card
+        .article-card__img
+            img(src="assets/img/" + srcOfImage, alt="")
+        .article-card__main
+            h3.article-card__headline Covid 19 пандемия. Обсуждаем создание вакцины!
+            .article-card__bottom
+                +time-info
+        a(href="").link-block

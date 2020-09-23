@@ -1,0 +1,6 @@
+mixin breadcrumbs(currentPage="Текущая страница")
+    nav(aria-label="breadcrumb")
+        ol.breadcrumb
+            li.breadcrumb-item
+                a(href="") Главная
+            li.breadcrumb-item(aria-current="page")= currentPage

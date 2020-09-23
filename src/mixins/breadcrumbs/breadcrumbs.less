@@ -1,0 +1,29 @@
+@import '../../style/_variables.less';
+
+.breadcrumb {
+    color: rgba(34, 39, 43, 0.5);
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+.breadcrumb-item {
+
+    a {
+        color: rgba(34, 39, 43, 0.5);
+        font-size: 0.75rem;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &:nth-of-type(n + 2)::before {
+        content: ">";
+        margin: 0 10px;
+    }
+}

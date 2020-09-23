@@ -1,0 +1,22 @@
+.feedback-form-wrapper
+    .container
+        form(action="").feedback-form
+            h3.feedback-form__headline.feedback-form__headline_mobile Задайте свой вопрос
+            div.feedback-form__inputs
+                label.input-default
+                    input(type="text", placeholder="Ваше имя *", required, pattern="^[А-Яа-яЁё\s]+$")
+                label.input-default
+                    input(type="tel", placeholder="Ваш телефон *", required)
+                label.input-default
+                    input(type="email", placeholder="Ваш e-mail *", required)
+            div.feedback-form__comment
+                textarea(name="", cols="30", rows="10", placeholder="Введите Ваше сообщение *", required).textarea-default
+            div.feedback-form__final
+                h3.feedback-form__headline Задайте свой вопрос
+                .feedback-form__policy-conf-wrapper
+                    label.feedback-form__policy-conf
+                        input(type="checkbox", name="", checked, required)
+                        div
+                    span.feedback-form__policy-conf-text Нажимая на кнопку отправить вы соглашаетесь с нашей 
+                        a(href="") политикой конфиденциальности
+                input(type="submit", value="Отправить").btn.btn_wide

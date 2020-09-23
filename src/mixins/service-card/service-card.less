@@ -1,0 +1,40 @@
+@import '../../style/_variables.less';
+
+.service-card {
+    background-color: @gray;
+    padding: 36px 56px 36px 36px;
+    min-height: 170px;
+    position: relative;
+
+    &::before {
+        background-color: @green;
+        content: "";
+        display: block;
+        height: 14px;
+        left: 0;
+        position: absolute;
+        top: 40px;
+        width: 13px;
+    }
+
+    &:hover {
+
+        .service-card__headline {
+            color: @green;
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 36px 28px;
+    }
+}
+
+.service-card__headline {
+    font-size: 1rem;
+    font-weight: 600;
+    .trans();
+
+    @media (max-width: 992px) {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,24 @@
+include ./mixins/breadcrumbs/breadcrumbs.pug
+include ./mixins/service-card/service-card.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container
+                +breadcrumbs("Наши услуги")
+                h1.headline-block Наши услуги
+                ul.service-list
+                    +service-card("Ведение бюджетного (бухгалтерского), налогового учета, формирование бюджетной (бухгалтерской) и налоговой отчетности Заказчика.")
+                    +service-card("Ведение кадрового учета Заказчика.")
+                    +service-card("Оказание услуг по финансово – экономическому обеспечению Заказчика.")
+                    
+                        
+            include ./templates/feedback-form/feedback-form.pug
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug

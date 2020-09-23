@@ -1,0 +1,60 @@
+@import '_variables.less';
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #FFF;
+    color: @black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:focus, textarea:focus, option:focus, select:focus {
+    outline: none;
+}
+
+a {
+    color: @black;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    appearance: none;
+    font-family: 'Montserrat', sans-serif;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    font-family: 'Montserrat', sans-serif;
+}
+
+*::selection {
+    background-color: @gray;
+    color: #FFF;
+}

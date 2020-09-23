@@ -1,0 +1,45 @@
+include ./mixins/breadcrumbs/breadcrumbs.pug
+include ./mixins/article-card/article-card.pug
+include ./mixins/important-link/important-link.pug
+include ./mixins/filter/filter.pug
+include ./mixins/articles-nav/articles-nav.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container
+                +breadcrumbs("Новости")
+                .content-with-aside
+                    div
+                        h1.headline-block Новости
+                        +filter("filter_mobile")
+                        ul.articles-list-with-aside
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                        a(href="").btn.btn_block Показать ещё
+                        +articles-nav
+                    div
+                        +filter
+                        +important-link
+                        ul.articles-list-aside
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+
+
+            include ./templates/feedback-form/feedback-form.pug
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug

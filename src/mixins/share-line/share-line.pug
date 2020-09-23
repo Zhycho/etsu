@@ -1,0 +1,13 @@
+include ../soc-list/soc-list.pug
+include ../icons/icons.pug
+
+mixin share-line
+    .share-line.share-line_article
+        div
+            a(href="").share-line__link
+                span На уровень выше
+                +icon-arrow-bent
+        div
+            span.share-line__title Поделиться
+            +soc-list
+            

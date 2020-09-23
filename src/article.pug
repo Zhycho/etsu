@@ -1,0 +1,20 @@
+include ./mixins/breadcrumbs/breadcrumbs.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container
+                +breadcrumbs
+                .content-with-aside
+                    div
+                    div
+
+            include ./templates/feedback-form/feedback-form.pug
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug

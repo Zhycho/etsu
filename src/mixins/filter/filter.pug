@@ -1,0 +1,25 @@
+mixin filter(classForMobile = "")
+    form(action="" class="" + classForMobile).filter
+        h2.filter__headline Фильтр новостей
+        .filter-item
+            span.filter-item__title Дата публикации
+            .filter-two-col
+                div
+                    .select
+                        select(name="")
+                            option(value="Декабрь") Декабрь
+                            option(value="Январь") Январь
+                            option(value="Февраль") Февраль
+                            option(value="Сентябрь") Сентябрь
+                div
+                    .select
+                        select(name="")
+                            option(value="2020") 2020
+                            option(value="2021") 2021
+                            option(value="2022") 2022
+                            option(value="2023") 2023
+        .filter-two-col
+            div
+                button(type="reset").btn.btn_wide.btn_small.btn_outline Сбросить
+            div
+                button(type="submit").btn.btn_wide.btn_small Найти

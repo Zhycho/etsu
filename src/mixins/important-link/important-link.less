@@ -1,0 +1,36 @@
+@import '../../style/_variables.less';
+
+.important-link {
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 12px 0px 52px 0;
+    position: relative;
+    .trans();
+
+    &::after {
+        border-right: 3px solid @black;
+        border-top: 3px solid @black;
+        content: "";
+        height: 6px;
+        left: calc(100% + 16px);
+        position: absolute;
+        transform: rotate(45deg) translate(-2px, -2px);
+        top: 50%;
+        .trans();
+        width: 6px;
+    }
+
+    &:hover {
+        color: @green;
+
+        &::after {
+            border-color: @green;
+            left: calc(100% + 20px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin: 12px 0px 20px 0;
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../style/_variables.less';
+
+.mm-menu_position-bottom.mm-menu_opened, .mm-menu_position-front.mm-menu_opened, .mm-menu_position-top.mm-menu_opened {
+    z-index: 100;
+}
+
+.mobile-menu__header {
+    background-color: @green;
+}
+
+.mobile-menu__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 52px;
+    padding: 0 5px 0 15px;
+}
+
+.mobile-menu__header-close {
+    align-items: center;
+    display: flex;
+    fill: #FFF;
+}
+
+.mm-panel_has-navbar .mm-navbar {
+    background-color: #FFF;
+}
+
+.mm-panels, .mm-panels>.mm-panel {
+    background-color: #FFF;
+}
+
+.mm-menu_navbar_top-1 .mm-panels {
+    top: 52px;
+}
+
+.mm-navbar__title {
+    color: @green!important;
+    font-size: 1.125rem;
+}
+
+.mm-btn_next:after, .mm-btn_prev:before {
+    border-color: @green;
+}
+
+.mm-listitem__text {
+    font-weight: 700;
+}

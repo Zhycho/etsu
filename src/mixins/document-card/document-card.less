@@ -1,0 +1,58 @@
+@import '../../style/_variables.less';
+
+.document-card {
+    background-color: @gray;
+    padding: 36px 56px 36px 36px;
+    min-height: 170px;
+    position: relative;
+
+    &::before {
+        background-color: @green;
+        content: "";
+        display: block;
+        height: 14px;
+        left: 0;
+        position: absolute;
+        top: 40px;
+        width: 13px;
+    }
+
+    &:hover {
+
+        .document-card__headline {
+            color: @green;
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 36px 28px;
+    }
+}
+
+.document-card__headline {
+    font-size: 1.125rem;
+    font-weight: 600;
+    .trans();
+
+    @media (max-width: 992px) {
+        font-size: 1rem;
+    }
+}
+
+.document-card__label {
+    align-items: center;
+    background: url(../img/document-label.png);
+    background-repeat: no-repeat;
+    display: flex;
+    fill: #FFF;
+    height: 38px;
+    justify-content: center;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 32px;
+
+    svg {
+        margin-bottom: 4px;
+    }
+}

@@ -1,0 +1,92 @@
+include ./mixins/article-card/article-card.pug
+include ./mixins/important-link/important-link.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container
+                .content-with-aside
+                    div
+                        .main-page-headline-wrapper
+                            img(src="assets/img/logo-etsu.svg", alt="")
+                            h1.main-page-headline Государственное казенное учреждение Пермского края «Единый центр учета»
+                        .main-page-content.typical-content
+                            p Государственное казенное учреждение Пермского края «Единый центр учета» создано в соответствии с Гражданским Кодексом Российской Федерации, Федеральным законом от 12.01.1996 г. No 7-ФЗ «О некоммерческих организациях», на основании распоряжения Правительства Пермского края от 12.12.2018 г. No 335-рп «О создании государственного казенного учреждения Пермского края «Единый центр учета».
+                            p Государственное казенное учреждение Пермского края «Единый центр учета» осуществляет свою деятельность в соответствии с предметом деятельности учреждения, утвержденным 
+                                a(href="") Уставом, изменением в Устав:
+                            ol
+                                li Ведение бюджетного (бухгалтерского) и налогового учета, кадрового учета (отдельных его направлений), формирование бюджетной (бухгалтерской) и налоговой отчетности для органов государственной власти (государственных органов) Пермского края, государственных учреждений Пермского края;
+                                li Финансово-экономическое обеспечение органов государственной власти (государственных органов) Пермского края, государственных учреждений Пермского края;
+                                li Формирование бюджетной (бухгалтерской) и налоговой отчетности органов государственной власти (государственных органов) Пермского края, государственных учреждений Пермского края.
+                        .main-page-big-link
+                            div
+                                span Новости ГКУ ПК «ЕЦУ»
+                            div
+                                span Перейти
+                                +icon-arrow-bent 
+                            a(href="").link-block
+                        ul.articles-list-with-aside
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                        ul.main-page-card-link-list
+                            li.card-link
+                                img(src="assets/img/logo-ministry-money.png", alt="")
+                                span.card-link__headline Новости Министерства Финансов Пермского края
+                                a(href="").link-block
+                            li.card-link
+                                img(src="assets/img/logo-etsu.svg", alt="")
+                                span.card-link__headline Новости Пермского края
+                                a(href="").link-block
+                        a(href="").btn.btn_block Показать ещё  
+                    div
+                        +important-link
+                        ul.articles-list-aside
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                .main-page-slider-wrapper
+                    .main-page-slider.js--main-page-slider
+                        div
+                            .card-link-small
+                                img(src="assets/img/logo-upravlyaem-vmeste.png", alt="")
+                                div
+                                    span.card-link-small__headline Управляем вместе
+                                    span.card-link-small__description Прими участие в программе развития Пермского края
+                                    a(href="").link-block
+                        div
+                            .card-link-small
+                                img(src="assets/img/logo-gosuslugi.png", alt="")
+                                div
+                                    span.card-link-small__headline Электронное правительство
+                                    span.card-link-small__description Госуслуги
+                                    a(href="").link-block
+                        div
+                            .card-link-small
+                                img(src="assets/img/logo-etsu.svg", alt="")
+                                div
+                                    span.card-link-small__headline Обращение граждан
+                                    span.card-link-small__description Электронное правительство
+                                    a(href="").link-block
+                        div
+                            .card-link-small
+                                img(src="assets/img/logo-upravlyaem-vmeste.png", alt="")
+                                div
+                                    span.card-link-small__headline Управляем вместе
+                                    span.card-link-small__description Прими участие в программе развития Пермского края
+                                    a(href="").link-block
+                    .main-page-slider-nav
+                        button.main-page-slider-nav__prev.js--main-page-slider-nav__prev
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20.38" height="15.25" viewBox="0 0 20.38 15.25"><path d="M781.642,467.46c.494-.565.966-1.152,1.487-1.691.97-1,1.981-1.966,2.948-2.973.345-.359.579-.357.917,0,1.249,1.326,1.221.889.011,2.114-2.06,2.088-4.155,4.141-6.215,6.229-.383.388-.631.417-1.031.011q-3.389-3.434-6.826-6.822c-.351-.347-.346-.571,0-.921,1.057-1.072,1.044-1.087,2.114-.013,1.316,1.319,2.629,2.642,3.955,3.975.3-.3.187-.6.188-.866.008-4.8,0-9.6.012-14.4,0-.331-.152-.82.288-.925a2.6,2.6,0,0,1,1.671.053c.294.136.181.557.181.857q.007,7.167,0,14.334v.841Z" transform="translate(471.444 -772.672) rotate(90)"/></svg>
+                        button.main-page-slider-nav__next.js--main-page-slider-nav__next
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20.38" height="15.25" viewBox="0 0 20.38 15.25"><path d="M781.642,467.46c.494-.565.966-1.152,1.487-1.691.97-1,1.981-1.966,2.948-2.973.345-.359.579-.357.917,0,1.249,1.326,1.221.889.011,2.114-2.06,2.088-4.155,4.141-6.215,6.229-.383.388-.631.417-1.031.011q-3.389-3.434-6.826-6.822c-.351-.347-.346-.571,0-.921,1.057-1.072,1.044-1.087,2.114-.013,1.316,1.319,2.629,2.642,3.955,3.975.3-.3.187-.6.188-.866.008-4.8,0-9.6.012-14.4,0-.331-.152-.82.288-.925a2.6,2.6,0,0,1,1.671.053c.294.136.181.557.181.857q.007,7.167,0,14.334v.841Z" transform="translate(-451.064 787.922) rotate(-90)"/></svg>
+            
+            include ./templates/feedback-form/feedback-form.pug
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug
