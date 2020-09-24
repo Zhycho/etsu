@@ -30,6 +30,11 @@ $(document).ready(function() {
         ]
     });
 
+    // Закрытие модалки спасибо по кнопке
+
+    $(document).on('click', '.js--thanks-close', function() {
+        $.fn.fancybox.close();
+    });
 
     // Даты
     moment.locale('ru');

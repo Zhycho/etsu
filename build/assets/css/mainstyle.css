@@ -307,7 +307,7 @@
   cursor: pointer;
   display: inline-block;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 15px 24px;
   text-align: center;
   transition: all 0.2s ease-in-out;
@@ -974,6 +974,342 @@
   font-weight: 700;
   margin-bottom: 24px;
 }
+.vacancy-info-page {
+  border-bottom: 1px solid #22272B;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 36px;
+}
+@media (max-width: 992px) {
+  .vacancy-info-page {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .vacancy-info-page {
+    display: flex;
+  }
+}
+@media (max-width: 576px) {
+  .vacancy-info-page {
+    display: block;
+  }
+}
+.vacancy-info-page__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  max-width: 500px;
+}
+.vacancy-info-page__list li {
+  display: flex;
+  font-size: 0.75rem;
+  margin-bottom: 28px;
+}
+.vacancy-info-page__list li:last-of-type {
+  margin-bottom: 0;
+}
+.vacancy-info-page__list li span {
+  display: block;
+}
+.vacancy-info-page__list li span:nth-of-type(1) {
+  min-width: 150px;
+  opacity: 0.5;
+  padding-right: 12px;
+}
+@media (max-width: 992px) {
+  .vacancy-info-page__list {
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .vacancy-info-page__list {
+    margin-bottom: 0;
+  }
+  .vacancy-info-page__list li span:nth-of-type(1) {
+    min-width: 120px;
+  }
+}
+@media (max-width: 576px) {
+  .vacancy-info-page__list {
+    margin-bottom: 28px;
+  }
+}
+.vacancy-info-page__aside {
+  width: 260px;
+}
+.vacancy-info-page__price {
+  color: #00753A;
+  display: block;
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .vacancy-info-page__price {
+    text-align: start;
+  }
+}
+@media (max-width: 768px) {
+  .vacancy-info-page__price {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .vacancy-info-page__price {
+    text-align: start;
+  }
+}
+.vacancy-info-page__btn {
+  font-size: 0.875rem;
+  padding: 15px 4px;
+  width: 100%;
+}
+.vacancy-info-page__btn.vacancy-info-page__btn_gray {
+  background-color: #EFF3F6;
+  border-color: #EFF3F6;
+  color: #22272B;
+  margin-bottom: 20px;
+}
+.vacancy-info-page__btn.vacancy-info-page__btn_gray:hover {
+  background-color: #00753A;
+  border-color: #00753A;
+  color: #FFF;
+}
+.vacancy-description {
+  border-bottom: 1px solid #22272B;
+  margin-bottom: 28px;
+  padding-bottom: 36px;
+}
+.vacancy-description ul {
+  margin-bottom: 28px;
+}
+.vacancy-description ul li {
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+  line-height: 22px;
+  padding-left: 60px;
+  position: relative;
+}
+.vacancy-description ul li::before {
+  background-color: #00753A;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 7px;
+  min-width: 7px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+  width: 7px;
+}
+@media (max-width: 480px) {
+  .vacancy-description ul li {
+    padding-left: 28px;
+  }
+}
+.vacancy-description__headline {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+.vacancy__link {
+  display: block;
+  font-size: 0.875rem;
+  margin: 0 0 28px auto;
+  padding: 15px 4px;
+  width: 260px;
+}
+@media (max-width: 576px) {
+  .vacancy__link {
+    margin: 0 auto 28px 0;
+  }
+}
+.modal {
+  display: none;
+  max-width: 880px;
+  padding: 0;
+}
+.modal .fancybox-close-small {
+  background: #00753A;
+  border-radius: 50%;
+  color: #FFF;
+  height: 30px;
+  padding: 2px;
+  right: 4px;
+  top: 4px;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  width: 30px;
+}
+@media (max-width: 900px) {
+  .modal {
+    margin: 0 15px;
+  }
+}
+.modal.modal_small {
+  max-width: 540px;
+  padding: 36px 32px;
+}
+.modal-content {
+  display: flex;
+}
+.modal-img img {
+  display: block;
+}
+@media (max-width: 900px) {
+  .modal-img {
+    display: none;
+  }
+}
+.modal-form {
+  padding: 52px 32px 32px;
+}
+@media (max-width: 480px) {
+  .modal-form {
+    padding: 40px 20px 32px;
+  }
+}
+.modal-headline {
+  display: block;
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin-bottom: 44px;
+  text-align: center;
+}
+.modal-headline strong {
+  font-weight: 700;
+}
+@media (max-width: 480px) {
+  .modal-headline {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+}
+.modal-input {
+  display: block;
+  margin-bottom: 20px;
+}
+.modal-input span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 32px;
+}
+.modal-input input {
+  border: 1px solid #22272B70;
+  display: block;
+  padding: 13px 15px;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .modal-input span {
+    font-size: 0.875rem;
+    margin-top: 24px;
+  }
+}
+.modal-textarea {
+  display: block;
+  margin-bottom: 20px;
+}
+.modal-textarea textarea {
+  border: 1px solid #22272B70;
+  display: block;
+  height: 93px;
+  padding: 13px 15px;
+  resize: none;
+  width: 100%;
+}
+.modal-text {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+@media (max-width: 480px) {
+  .modal-text {
+    margin-bottom: 8px;
+  }
+}
+.modal-file {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 16px;
+  position: relative;
+}
+.modal-file span {
+  align-items: center;
+  background: #EFF3F6;
+  display: flex;
+  font-size: 0.875rem;
+  height: 46px;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+.modal-file input {
+  height: 1px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+.modal-file:hover span {
+  background: #00753A;
+  color: #FFF;
+}
+.modal-questionary-link {
+  align-items: center;
+  background: #EFF3F6;
+  border: none;
+  color: #22272B;
+  display: flex;
+  height: 46px;
+  justify-content: center;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.modal-questionary-link:hover {
+  background: #00753A;
+  color: #FFF;
+}
+.modal-conf {
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.modal-conf a {
+  color: #00753A;
+  display: inline-flex;
+  text-decoration: underline;
+}
+.modal-thanks-headline {
+  display: block;
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0 auto 32px;
+  max-width: 330px;
+  text-align: center;
+}
+.modal-thanks-text {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin: 0 auto 32px;
+  max-width: 330px;
+  text-align: center;
+}
 
 * {
   box-sizing: border-box;
@@ -1162,6 +1498,28 @@ textarea {
     height: 40px;
     width: 40px;
   }
+}
+
+.breadcrumb {
+  color: rgba(34, 39, 43, 0.5);
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.breadcrumb-item a {
+  color: rgba(34, 39, 43, 0.5);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+.breadcrumb-item:nth-of-type(n + 2)::before {
+  content: ">";
+  margin: 0 10px;
 }
 
 .document-card {
@@ -1388,28 +1746,6 @@ textarea {
   top: calc(50% - 2px);
   transform: translateY(-50%) rotate(-135deg);
   width: 5px;
-}
-
-.breadcrumb {
-  color: rgba(34, 39, 43, 0.5);
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  font-size: 0.75rem;
-  font-weight: 500;
-  margin-bottom: 28px;
-}
-.breadcrumb-item a {
-  color: rgba(34, 39, 43, 0.5);
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-.breadcrumb-item a:hover {
-  text-decoration: underline;
-}
-.breadcrumb-item:nth-of-type(n + 2)::before {
-  content: ">";
-  margin: 0 10px;
 }
 
 .important-link {

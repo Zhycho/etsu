@@ -91,7 +91,7 @@
     cursor: pointer;
     display: inline-block;
     font-size: 0.875rem;
-    font-weight: 400;
+    font-weight: 500;
     padding: 15px 24px;
     text-align: center;
     .trans();
@@ -875,4 +875,382 @@
     display: block;
     font-weight: 700;
     margin-bottom: 24px;
+}
+
+
+// Страница вакансии
+
+.vacancy-info-page {
+    border-bottom: 1px solid @black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 36px;
+
+    @media (max-width: 992px) {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
+
+    @media (max-width: 576px) {
+        display: block;
+    }
+}
+
+.vacancy-info-page__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    max-width: 500px;
+
+    li {
+        display: flex;
+        font-size: 0.75rem;
+        margin-bottom: 28px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        span {
+            display: block;
+
+            &:nth-of-type(1) {
+                min-width: 150px;
+                opacity: 0.5;
+                padding-right: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        margin-bottom: 28px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 0;
+
+        li {
+
+            span {
+             
+                &:nth-of-type(1) {
+                    min-width: 120px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        margin-bottom: 28px;
+    }
+}
+
+.vacancy-info-page__aside {
+    width: 260px;
+}
+
+.vacancy-info-page__price {
+    color: @green;
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @media (max-width: 992px) {
+        text-align: start;
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+
+    @media (max-width: 576px) {
+        text-align: start;
+    }
+}
+
+.vacancy-info-page__btn {
+    font-size: 0.875rem;
+    padding: 15px 4px;
+    width: 100%;
+
+    &.vacancy-info-page__btn_gray {
+        background-color: @gray;
+        border-color: @gray;
+        color: @black;
+        margin-bottom: 20px;
+
+        &:hover {
+            background-color: @green;
+            border-color: @green;
+            color: #FFF;
+        }
+    }
+}
+
+.vacancy-description {
+    border-bottom: 1px solid @black;
+    margin-bottom: 28px;
+    padding-bottom: 36px;
+
+    ul {
+        margin-bottom: 28px;
+
+        li {
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+            line-height: 22px;
+            padding-left: 60px;
+            position: relative;
+
+            &::before {
+                background-color: @green;
+                border-radius: 50%;
+                content: "";
+                display: block;
+                height: 7px;
+                min-width: 7px;
+                left: 0;
+                position: absolute;
+                top: 8px;
+                width: 7px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        ul {
+
+            li {
+                padding-left: 28px;
+            }
+        }
+    }
+}
+
+.vacancy-description__headline {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.vacancy__link {
+    display: block;
+    font-size: 0.875rem;
+    margin: 0 0 28px auto;
+    padding: 15px 4px;
+    width: 260px;
+
+    @media (max-width: 576px) {
+        margin: 0 auto 28px 0;
+    }
+}
+
+.modal {
+    display: none;
+    max-width: 880px;
+    padding: 0;
+
+    .fancybox-close-small {
+        background: @green;
+        border-radius: 50%;
+        color: #FFF;
+        height: 30px;
+        padding: 2px;
+        right: 4px;
+        top: 4px;
+        .trans();
+        width: 30px;
+    }
+
+    @media (max-width: 900px) {
+        margin: 0 15px;
+    }
+
+    &.modal_small {
+        max-width: 540px;
+        padding: 36px 32px;
+    }
+}
+
+.modal-content {
+    display: flex;
+}
+
+.modal-img {
+
+    img {
+        display: block;
+    }
+
+    @media (max-width: 900px) {
+        display: none;
+    } 
+}
+
+.modal-form {
+    padding: 52px 32px 32px;
+
+    @media (max-width: 480px) {
+        padding: 40px 20px 32px;
+    }
+}
+
+.modal-headline {
+    display: block;
+    font-size: 1.375rem;
+    font-weight: 500;
+    margin-bottom: 44px;
+    text-align: center;
+
+    strong {
+        font-weight: 700;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.25rem;
+        margin-bottom: 24px;
+    }
+}
+
+.modal-input {
+    display: block;
+    margin-bottom: 20px;
+
+    span {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 32px;
+    }
+
+    input {
+        border: 1px solid #22272B70;
+        display: block;
+        padding: 13px 15px;
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        span {
+            font-size: 0.875rem;
+            margin-top: 24px;
+        }
+    }
+}
+
+.modal-textarea {
+    display: block;
+    margin-bottom: 20px;
+
+    textarea {
+        border: 1px solid #22272B70;
+        display: block;
+        height: 93px;
+        padding: 13px 15px;
+        resize: none;
+        width: 100%;
+    }
+}
+
+.modal-text {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+    @media (max-width: 480px) {
+        margin-bottom: 8px;
+    }
+}
+
+.modal-file {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 16px;
+    position: relative;
+
+    span {
+        align-items: center;
+        background: @gray;
+        display: flex;
+        font-size: 0.875rem;
+        height: 46px;
+        justify-content: center;
+        .trans();
+        width: 100%;
+    }
+
+    input {
+        height: 1px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }
+
+    &:hover {
+
+        span {
+            background: @green;
+            color: #FFF;
+        }
+    }
+}
+
+.modal-questionary-link {
+    align-items: center;
+    background: @gray;
+    border: none;
+    color: @black;
+    display: flex;
+    height: 46px;
+    justify-content: center;
+    margin-bottom: 12px;
+    width: 100%;
+
+    &:hover {
+        background: @green;
+        color: #FFF;
+    }
+}
+
+.modal-conf {
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+
+    a {
+        color: @green;
+        display: inline-flex;
+        text-decoration: underline;
+    }
+}
+
+.modal-thanks-headline {
+    display: block;
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 0 auto 32px;
+    max-width: 330px;
+    text-align: center;
+}
+
+.modal-thanks-text {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    margin: 0 auto 32px;
+    max-width: 330px;
+    text-align: center;
 }

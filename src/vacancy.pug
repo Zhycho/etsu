@@ -1,0 +1,109 @@
+include ./mixins/breadcrumbs/breadcrumbs.pug
+include ./mixins/share-line/share-line.pug
+include ./mixins/article-card/article-card.pug
+include ./mixins/important-link/important-link.pug
+
+doctype html
+html(lang="ru")
+    head
+        include ./templates/head/head.pug
+    body
+        header
+            include ./templates/header/header.pug
+        main
+            .container
+                +breadcrumbs("Вакансия")
+                .content-with-aside
+                    div
+                        h1.headline-block Бухгалтер
+                        .vacancy-info-page
+                            ul.vacancy-info-page__list
+                                li
+                                    span График:
+                                    span Полный рабочий день 
+                                li
+                                    span Опыт работы:
+                                    span От 1 года
+                                li
+                                    span Образование:
+                                    span Высшее
+                            .vacancy-info-page__aside
+                                span.vacancy-info-page__price 25 000 &#8381;
+                                a(href="").btn.vacancy-info-page__btn.vacancy-info-page__btn_gray Вернуться к другим вакансиям
+                                a(href="#modal-response" data-fancybox).btn.vacancy-info-page__btn Откликнуться
+                        .vacancy-description
+                            span.vacancy-description__headline Обязанности:
+                            ul
+                                li Ведение бухгалтерского учета государственных учреждений (операции с нефинансовыми активами, расчеты с дебиторами по доходам ( в т.ч. учет администрирования доходов главным администратором доходов), санкционирование, расчеты с поставщиками и подрядчиками) 
+                                li Ведение налогового учета;
+                                li Подготовка отдельных форм бюджетной отчетности, отчетности в налоговые органы, органы статистики по участку работы;
+                            span.vacancy-description__headline Требования:
+                            ul
+                                li Высшее образование или среднее профессиональное образование;
+                                li Опыт работы в должности бухгалтера в органах государственной (муниципальной) власти, государственных (муниципальных) учреждениях;
+                                li Знание бюджетного и налогового законодательства;
+                                li Знание всех профильных бухгалтерских программ (1С Бухгалтерия государственного учреждения, АЦК-финансы, СУФД).
+                            span.vacancy-description__headline Условия:
+                            ul
+                                li В соответствии с трудовым законодательством.
+                        a(href="#modal-response" data-fancybox).btn.vacancy__link Откликнуться
+                        +share-line
+                    div
+                        +important-link
+                        ul.articles-list-aside
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+                            +article-card("article-img.png")
+            .modal#modal-response
+                .modal-content
+                    .modal-img
+                        img(src="assets/img/modal-pic.png", alt="")
+                    form(action="").modal-form
+                        span.modal-headline Отклик на вакансию: 
+                            strong Бухгалтер
+                        label.modal-input
+                            input(type="text", name="", placeholder="Ваше имя *", required)
+                        label.modal-input
+                            input(type="tel", name="", placeholder="Ваш телефон *", required)
+                        label.modal-input
+                            span Ваше резюме:
+                            input(type="text", name="", placeholder="Ссылка на резюме:", required)
+                        span.modal-text Или прикрепите файл в формате .docx (Microsoft Office Word) или .pdf
+                        label.modal-file
+                            span Выбрать файл
+                            input(type="file", name="")
+                        span.modal-text Или пройдите анкету онлайн
+                        a(href="#modal-questionary" data-fancybox).btn.modal-questionary-link Заполнить анкету
+                        span.modal-conf Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь с нашей 
+                            a(href="") политикой конфиденциальности!
+                        input(type="submit", value="Отправить").btn.btn_wide
+            .modal#modal-questionary
+                .modal-content
+                    .modal-img
+                        img(src="assets/img/modal-pic.png", alt="")
+                    form(action="").modal-form
+                        span.modal-headline Анкета на вакансию: 
+                            strong Бухгалтер
+                        label.modal-input
+                            input(type="text", name="", placeholder="Ваше ФИО *", required)
+                        label.modal-input
+                            input(type="tel", name="", placeholder="Ваш телефон *", required)
+                        label.modal-input
+                            input(type="text", name="", placeholder="Возраст *", required)
+                        label.modal-textarea
+                            textarea(name="", cols="30", rows="10", placeholder="Бывшее (-ые) места работы * Опишите ваш предыдущий опыт работы (где работали, какой список обязанностей выполняли):", required)
+                        label.modal-textarea
+                            textarea(name="", cols="30", rows="10", placeholder="Образование * Напишите какие учебные заведения заканчивали, по каким специальностям и в каком году:", required)
+                        span.modal-conf Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь с нашей 
+                            a(href="") политикой конфиденциальности!
+                        input(type="submit", value="Отправить").btn.btn_wide
+            .modal.modal_small#modal-thanks
+                span.modal-thanks-headline Спасибо что откликнулись на нашу вакансию!
+                span.modal-thanks-text Мы рассмотрим вашу кандидатуру и свяжемся с вами!
+                a(href="").btn.btn_wide.js--thanks-close Закрыть окно
+
+
+            include ./templates/feedback-form/feedback-form.pug
+            include ./templates/mobile-menu/mobile-menu.pug
+        footer
+            include ./templates/footer/footer.pug
